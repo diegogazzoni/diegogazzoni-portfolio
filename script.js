@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
           
           // Sostituisco il contenuto HTML mentre è invisibile (fuori schermo a destra)
           content.innerHTML = html;
+
+          // Re-attach event listeners for project details
+          initProjectDetails(content);
           
           // Forza il browser a ricalcolare il layout (Reflow) per applicare slide-in-start prima di animare
           void content.offsetWidth;
@@ -115,3 +118,25 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSection(name);
   });
 });
+
+function initProjectDetails(container) {
+  const toggles = container.querySelectorAll('.toggle-details');
+  toggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.card');
+      const details = card.querySelector('.project-details');
+      const isHidden = details.hidden;
+      
+      if (isHidden) {
+        details.hidden = false;
+        btn.textContent = 'Nascondi dettagli';
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        details.hidden = true;
+        btn.textContent = 'Espandi dettagli';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
+

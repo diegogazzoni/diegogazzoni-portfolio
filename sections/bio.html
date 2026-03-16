@@ -3,93 +3,154 @@
     <div>
       <p class="eyebrow">Bio / CV</p>
     </div>
-    <div style="text-align: right;">
-      <a class="link" href="https://github.com/diegogazzoni" target="_blank" rel="noopener">GitHub</a> /
-      <a class="link" href="https://www.linkedin.com/in/diegogazzoni" target="_blank" rel="noopener">LinkedIn</a>
+    <div style="display:flex; gap:16px;">
+      <a class="button button--small" href="https://github.com/diegogazzoni" target="_blank" rel="noopener">GitHub</a>
+      <a class="button button--small" href="https://www.linkedin.com/in/diegogazzoni" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-<p class="text">ssd</p>
-  <div class="cv__grid">
-    
-    <div class="cv__block">
-      <h3>Esperienze lavorative</h3>
+
+  <div class="cv__cards">
+
+    <article class="card cv-card">
+      <div class="pill pill--soft">Lavoro</div>
+      <h3>Settore tecnologico</h3>
       <ul class="timeline">
         <li>
           <div class="timeline__meta">Ott 2025 — Oggi</div>
-          <div class="timeline__title">Software Developer @ IdentifAI Labs</div>
-          <p class="timeline__desc">Creazione di microservizi web in Python, TypeScript e PHP. Implementazione di servizi scalabili per forgery detection. Design architetturale e ottimizzazione delle performance.</p>
+          <div class="timeline__title">Software Developer · IdentifAI Labs</div>
+          <p class="timeline__desc">Microservizi web in Python, TypeScript e PHP. Servizi scalabili per forgery detection, design architetturale e ottimizzazione delle performance.</p>
         </li>
         <li>
           <div class="timeline__meta">Feb 2025 — Ott 2025</div>
-          <div class="timeline__title">Teaching Assistant @ UniBO</div>
+          <div class="timeline__title">Teaching Assistant · UniBO</div>
           <p class="timeline__desc">Supporto didattico per laboratori Python e MATLAB.</p>
         </li>
         <li>
           <div class="timeline__meta">Mag 2024 — Ott 2024</div>
-          <div class="timeline__title">Research Fellow @ UniBO</div>
-          <p class="timeline__desc">Sviluppo di algoritmi per l'analisi di simulazioni di Molecular Dynamics di proteine tramite metodi statistici avanzati. </p>
-        </li>
-        <li>
-          <div class="timeline__meta">Giu 2018 — Giu 2023</div>
-          <div class="timeline__title">Fattorino portapizze</div>
-          <p class="timeline__desc">Durante gli studi universitari ho lavorato come portapizze. Lavoro che ho apprezzato per il continuo contatto con le persone (e col cibo :P). </p>
+          <div class="timeline__title">Research Fellow · UniBO</div>
+          <p class="timeline__desc">Algoritmi per l'analisi di simulazioni Molecular Dynamics tramite metodi statistici avanzati.</p>
         </li>
       </ul>
+      <h3>Ristorazione</h3>
+      <ul class="timeline">
+      <li>
+          <div class="timeline__meta">Giu 2018 — Giu 2023</div>
+          <div class="timeline__title">Fattorino portapizze</div>
+          <p class="timeline__desc">Durante gli studi. Lavoro che ho apprezzato per il continuo contatto con le persone (e col cibo :P).</p>
+        </li>
+      </ul>
+    </article>
 
-      <h3>Skillset</h3>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">C</span>
- 
-        <span class="tag">Microservices</span>
-        <span class="tag">Containers</span>
-        <span class="tag">NoSQL</span>
-        <span class="tag">Git</span>
-      </div>
-    </div>
-
-    <div class="cv__block">
-      <h3>Istruzione</h3>
+    <article class="card cv-card">
+      <div class="pill pill--soft">Istruzione</div>
+      <h3>Formazione</h3>
       <ul class="timeline">
         <li>
-          <div class="timeline__meta">2024 - 2025</div>
-          <div class="timeline__title">PhD in Biomedical Engineering</div>
+          <div class="timeline__meta">2024 — 2025</div>
+          <div class="timeline__title">PhD · Biomedical Engineering</div>
           <p class="timeline__desc">Università di Bologna · Interrotto</p>
+          <p class="timeline__desc">Analisi di serie temporali biologiche tramite reti neurali e algoritmi statistici avanzati.</p>
         </li>
         <li>
           <div class="timeline__meta">2021 — 2024</div>
-          <div class="timeline__title">MSc Biomedical Engineering</div>
+          <div class="timeline__title">MSc · Biomedical Engineering</div>
           <p class="timeline__desc">Università di Bologna · 110/110</p>
+          <p class="timeline__desc">Focus su modelli matematici avanzati, sviluppo di algoritmi e progettazione di dispositivi medici.</p>
         </li>
         <li>
           <div class="timeline__meta">2018 — 2021</div>
-          <div class="timeline__title">BSc Biomedical Engineering</div>
+          <div class="timeline__title">BSc · Biomedical Engineering</div>
           <p class="timeline__desc">Università di Bologna · 106/110</p>
+          <p class="timeline__desc">Basi solide di teoria dell'informazione, elettronica e fondamenti di bioingegneria.</p>
+        </li>
+        <li>
+          <div class="timeline__meta">2012 — 2018</div>
+          <div class="timeline__title">Diploma · ITIS Blaise Pascal, Indirizzo Informatico</div>
+          <p class="timeline__desc">Cesena (FC) · 83/100</p>
         </li>
       </ul>
+    </article>
 
-      <h3>Lingue</h3>
-      <p class="timeline__desc">Italiano (Nativo), Inglese (B2)</p>
+    <article class="card cv-card">
+      <div class="pill pill--soft">Tecnico</div>
+      <h3>Competenze</h3>
 
-      <h3>Pubblicazioni</h3>
+      <div class="skill-group">
+        <h4>Ingegneria & AI</h4>
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">Agent-Based Dev</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Analisi Statistica</span>
+          <span class="tag">Modellazione Matematica</span>
+        </div>
+      </div>
+      
+      <div class="skill-group">
+        <h4>Linguaggi</h4>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">C</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Frameworks & Web</h4>
+        <div class="tags">
+          <span class="tag">NestJS</span>
+          <span class="tag">React</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Data Science & AI</h4>
+        <div class="tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Pandas</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cv-card">
+      <div class="pill pill--soft">Lingue</div>
+      <h3>Comunicazione</h3>
       <ul class="timeline">
         <li>
-          <div class="timeline__meta">2025 · Biophysical Journal, 124(3), 129a</div>
-          <div class="timeline__title">Markov state models of conduction and selectivity in KcsA channels</div>
-          <p class="timeline__desc">D. Gazzoni, C. Domene, S. Furini. <a href="https://doi.org/10.1016/10.1016/j.bpj.2024.11.730" class="link">DOI</a></p>
+          <div class="timeline__title">Italiano</div>
+          <p class="timeline__desc">Madrelingua</p>
         </li>
         <li>
-          <div class="timeline__meta">2024 · Computing in Cardiology</div>
-          <div class="timeline__title">In Silico Simulation of Mouse Atrioventricular Conduction Including Sinus Node and Atrial Myocardium</div>
-          <p class="timeline__desc">D. Gazzoni, E. Ricci, C. Bartolucci, S. Severi. <a href="https://doi.org/10.22489/CinC.2024.123" class="link">DOI</a></p>
-        </li>
-        <li>
-          <div class="timeline__meta">2025 · Preprint</div>
-          <div class="timeline__title">Role of Water Models in Simulations of Ion Conduction in Potassium Channels</div>
-          <p class="timeline__desc">S. Bosio, D. Gazzoni, M. Masetti, S. Furini. <a href="https://doi.org/10.1101/2025.10.24.684299" class="link">DOI</a></p>
+          <div class="timeline__title">Inglese</div>
+          <p class="timeline__desc">B2 — Professionale</p>
         </li>
       </ul>
-    </div>
+    </article>
+
+    <article class="card cv-card">
+      <div class="pill pill--soft">Personale</div>
+      <h3>Hobby & Interessi</h3>
+      <div class="tags">
+        <span class="tag">Fotografia</span>
+        <span class="tag">Produzione Musicale & DJing</span>
+        <span class="tag">Cucina</span>
+        <span class="tag">Simracing & Motorsport</span>
+        <span class="tag">Vintage & Abbigliamento</span>
+      </div>
+    </article>
+
   </div>
 </section>
