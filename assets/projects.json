@@ -1,0 +1,26 @@
+[
+  {
+    "pill": "C · SDL2",
+    "title": "Emulatore Chip 8",
+    "description": "Emulatore per il linguaggio di programmazione Chip 8, con supporto per giochi classici e debugging.",
+    "details_heading": "Il Progetto",
+    "details_body": "L’obiettivo era creare un emulatore fedele e performante per Chip 8. Ho utilizzato SDL2 per la grafica e l'input, e C per la logica dell'emulatore.",
+    "stack": [
+      "C",
+      "SDL2"
+    ],
+    "link": "https://github.com/diegogazzoni/chippotto"
+  },
+  {
+    "pill": "C",
+    "title": "ANNE (Artificial Neural Network Engine)",
+    "description": "Sistema di reti neurali artificiali creato da zero in C.",
+    "details_heading": "Il Progetto",
+    "details_body": "L’obiettivo era creare un sistema di reti neurali artificiali performante e modulare. Ho utilizzato C per implementare la logica di predizione e addestramento per reti neurali.",
+    "stack": [
+      "C",
+      "SDL2"
+    ],
+    "link": "https://github.com/diegogazzoni/chippotto"
+  }
+]

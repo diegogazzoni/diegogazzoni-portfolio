@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Re-attach event listeners for project details
           initProjectDetails(content);
+          // Load projects from JSON if on the projects section
+          if (name === 'projects') loadProjects(content);
           
           // Forza il browser a ricalcolare il layout (Reflow) per applicare slide-in-start prima di animare
           void content.offsetWidth;
@@ -118,6 +120,39 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSection(name);
   });
 });
+
+async function loadProjects(container) {
+  const list = container.querySelector('#projects-list');
+  if (!list) return;
+  try {
+    const res = await fetch('assets/projects.json');
+    if (!res.ok) throw new Error('projects.json not found');
+    const projects = await res.json();
+    list.innerHTML = projects.map(p => `
+      <article class="card project">
+        <div class="card__top-row">
+          <div class="pill pill--soft">${p.pill}</div>
+          ${p.link ? `<a class="button button--xs" href="${p.link}" target="_blank" rel="noopener">Vedi progetto &rarr;</a>` : ''}
+        </div>
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+        <button class="expand-toggle toggle-details" aria-expanded="false">Espandi dettagli</button>
+        <div class="project-details" hidden>
+          <div class="desc">
+            <h4>${p.details_heading}</h4>
+            <p>${p.details_body}</p>
+            <h4>Stack Tecnologico</h4>
+            <div class="tags">${p.stack.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          </div>
+        </div>
+      </article>
+    `).join('');
+    initProjectDetails(container);
+  } catch (e) {
+    console.error('Errore caricamento progetti:', e);
+    list.innerHTML = '<p style="color:var(--muted); padding:20px">Impossibile caricare i progetti.</p>';
+  }
+}
 
 function initProjectDetails(container) {
   const toggles = container.querySelectorAll('.toggle-details');
