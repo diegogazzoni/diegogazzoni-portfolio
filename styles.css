@@ -130,17 +130,21 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 8px 16px;
-  border: 2px solid transparent; 
-  transition: transform var(--speed) ease, box-shadow var(--speed) ease;
-}
-
-.site-nav .nav-link:hover,
-.site-nav .nav-link.is-active {
   border: 2px solid var(--ink);
   background: var(--pop-yellow);
   color: var(--ink);
-  transform: translateY(-2px);
-  box-shadow: 4px 4px 0 var(--ink); /* Retro 3D Shadow Match */
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform var(--speed) ease, box-shadow var(--speed) ease;
+}
+
+.site-nav .nav-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.site-nav .nav-link.is-active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
 
@@ -383,7 +387,7 @@ main.slide-in-start {
   justify-content: center;
   gap: 8px;
   padding: 12px 16px;
-  background: transparent;
+  background: var(--pop-yellow);
   color: var(--ink);
   border: 2px solid var(--ink);
   border-radius: 0; /* Sharp edges */
@@ -391,20 +395,19 @@ main.slide-in-start {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  transition: transform var(--speed) ease, background var(--speed) ease, color var(--speed) ease;
-  box-shadow: none;
+  transition: transform var(--speed) ease, box-shadow var(--speed) ease;
+  box-shadow: 4px 4px 0 var(--ink); /* Retro block shadow */
 }
 
 .button:hover,
 .button:focus-visible {
-  transform: translateY(-2px);
-  background: var(--pop-yellow);
-  color: var(--ink);
-  box-shadow: 4px 4px 0 var(--ink); /* Retro block shadow */
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .button:active {
-  transform: translateY(0);
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
 .button.ghost {
@@ -751,15 +754,20 @@ main.slide-in-start {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   border: 1.5px solid var(--ink);
-  background: transparent;
+  background: var(--pop-yellow);
   cursor: pointer;
-  transition: transform var(--speed) ease, background var(--speed) ease;
+  transition: transform var(--speed) ease, box-shadow var(--speed) ease;
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .button--xs:hover {
-  background: var(--pop-yellow);
   transform: translateY(-1px);
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.button--xs:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 .skill-group h4 {
