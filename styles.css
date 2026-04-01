@@ -1,26 +1,26 @@
 :root {
   /* =========================================
-     ACTIVE THEME: Creative Pastel Pop (Fixed)
+     ACTIVE THEME: Warm Neobrutalism
+     Desert Sun & Terracotta pastel palette
      ========================================= */
-  --pop-yellow: #FFE66D;
-  --pop-green: #4ECDC4;
-  --pop-red: #FF6B6B;
-  --pop-orange: #FFB37B; /* Pastel Orange */
-  --pop-blue: #A2D2FF; 
-  --pop-black: #000000;
-  --pop-white: #ffffff; /* Pure White requested */
+  --pop-yellow: #FFD166;    /* Warm Amber — primary accent (buttons, nav, pills) */
+  --pop-green:  #06D6A0;    /* Mint Green — secondary elements */
+  --pop-red:    #EF476F;    /* Hot Pink-Red — bold accent */
+  --pop-orange: #FF9B6A;    /* Terracotta — creative accent */
+  --pop-blue:   #F4A261;    /* Warm Sand */
+  --pop-black:  #1A0A00;    /* Deep Espresso */
+  --pop-white:  #FFF8EE;    /* Warm Cream */
 
-  --bg: var(--pop-white);
-  --surface: #ffffff;
-  --ink: var(--pop-black);
-  /* Muted text slightly lighter, but still readable */
-  --muted: #333333; 
-  
+  --bg:      var(--pop-white);
+  --surface: #FFFFFF;
+  --ink:     var(--pop-black);
+  --muted:   #5C3D2E;       /* Warm Brown muted text */
+
   --accent-1: var(--pop-red);    /* Buttons (Primary) */
   --accent-2: var(--pop-green);  /* Secondary Elements */
   --accent-3: var(--pop-yellow); /* Highlights / Pills */
-  
-  --border: #dddddd;
+
+  --border: #E8C99A;
 
   /* =========================================
      THEME: Vibrant Energy (Inactive)
@@ -36,8 +36,8 @@
   */
   
   --shadow: 4px 4px 0 var(--ink);
-  --radius: 0;
-  --radius-sm: 0;
+  --radius: 8px;
+  --radius-sm: 4px;
   --space: 20px;
   --space-lg: 36px;
   --space-xl: 56px;
@@ -81,7 +81,7 @@ img {
   background: var(--pop-yellow);
   color: var(--ink);
   border: 2px solid var(--ink); 
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -103,7 +103,7 @@ img {
 
 .site-nav ul {
   list-style: none;
-  padding: 20px 0;
+  padding: 16px 20px;
   margin: var(--space-xl) 0 var(--space-lg);
   width: 100%;
   max-width: none;
@@ -111,8 +111,10 @@ img {
   justify-content: flex-start;
   gap: 28px;
   flex-wrap: wrap;
-  border-top: 2px solid var(--ink);    
-  border-bottom: 2px solid var(--ink); 
+  background: var(--pop-orange);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
 .site-nav ul li:last-child {
@@ -131,6 +133,7 @@ img {
   letter-spacing: 0.1em;
   padding: 8px 16px;
   border: 2px solid var(--ink);
+  border-radius: var(--radius);
   background: var(--pop-yellow);
   color: var(--ink);
   box-shadow: 4px 4px 0 var(--ink);
@@ -145,6 +148,8 @@ img {
 .site-nav .nav-link.is-active {
   transform: translate(4px, 4px);
   box-shadow: none;
+  background: var(--ink);
+  color: var(--pop-white);
 }
 
 
@@ -328,7 +333,7 @@ main.slide-in-start {
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   background: var(--pop-yellow); /* Pastel Pop */
   color: var(--ink);
   font-weight: 600;
@@ -346,7 +351,7 @@ main.slide-in-start {
 .card {
   background: var(--surface);
   border: 2px solid var(--ink);
-  border-radius: 0;
+  border-radius: var(--radius);
   padding: var(--space);
   box-shadow: 4px 4px 0 var(--ink); 
   transition: transform var(--speed) ease, box-shadow var(--speed) ease;
@@ -361,7 +366,7 @@ main.slide-in-start {
 .card__label {
   display: inline-flex;
   padding: 4px 10px;
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   background: var(--pop-yellow);
   color: var(--ink);
   font-weight: 700;
@@ -390,7 +395,7 @@ main.slide-in-start {
   background: var(--pop-yellow);
   color: var(--ink);
   border: 2px solid var(--ink);
-  border-radius: 0; /* Sharp edges */
+  border-radius: var(--radius); /* Slightly rounded */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
