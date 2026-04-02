@@ -23,9 +23,10 @@
       </button>
       <ul id="nav-menu">
         <li><a class="nav-link" href="#home">conosciamoci</a></li>
-        <li><a class="nav-link" href="#bio">esperienze</a></li>
+        <li><a class="nav-link" href="#servizi">servizi</a></li>
+        <li><a class="nav-link" href="#bio">curriculum</a></li>
         <li><a class="nav-link" href="#projects">laboratorio</a></li>
-        <li><a class="nav-link" href="#contacts">contattami :)</a></li>
+        <li><a class="nav-link" href="#contacts">contattami</a></li>
       </ul>
     </nav>
   </header>
@@ -39,9 +40,10 @@
 
 
   <footer class="site-footer">
-    <p>Portfolio in evoluzione :)</p>
+    <p>&copy; <span id="footer-year"></span> Diego Gazzoni &mdash; Tutti i diritti riservati.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
