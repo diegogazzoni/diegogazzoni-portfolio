@@ -152,6 +152,45 @@ img {
   color: var(--pop-white);
 }
 
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px 8px;
+  background: var(--pop-yellow);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform var(--speed) ease, opacity var(--speed) ease;
+  transform-origin: center;
+}
+
+/* X animation when open */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 
 
 main {
@@ -645,8 +684,40 @@ main.slide-in-start {
 }
 
 @media (max-width: 720px) {
+  .site-nav {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
   .site-nav ul {
-    gap: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .site-nav.is-open ul {
+    display: flex;
+  }
+
+  .site-nav ul li {
+    width: 100%;
+  }
+
+  .site-nav ul li:last-child {
+    margin-left: 0;
+  }
+
+  .site-nav .nav-link {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    display: block;
   }
 
   .contacts {

@@ -2,6 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById('content');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  // --- Mobile hamburger menu ---
+  const navToggle = document.querySelector('.nav-toggle');
+  const siteNav = document.querySelector('.site-nav');
+
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Chiudi menu' : 'Apri menu');
+    });
+  }
+
+  // Close mobile menu when a nav link is clicked
+  siteNav.addEventListener('click', (e) => {
+    if (e.target.closest('.nav-link')) {
+      siteNav.classList.remove('is-open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  // --- Fine mobile menu ---
+
   function setActive(name) {
     console.log('Attivazione sezione:', name);
     navLinks.forEach((l) => {
